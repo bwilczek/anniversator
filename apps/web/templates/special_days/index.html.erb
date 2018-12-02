@@ -1,12 +1,14 @@
 <h2>All special days</h2>
 
-<div id="special_days">
-  <div class="special_day">
-    <h3>Days since last major overhaul: 983</h3>
-    <p>01.12.2015</p>
+<% if special_days.any? %>
+  <div id="special_days">
+    <% special_days.each do |day| %>
+      <div class="special_day">
+        <h3><%= day.title %></h3>
+        <p><%= day.date %></p>
+      </div>
+    <% end %>
   </div>
-  <div class="special_day">
-    <h3>Days until next major overhaul: 1283</h3>
-    <p>01.12.2025</p>
-  </div>
-</div>
+<% else %>
+  <p class="placeholder">There are no special days yet.</p>
+<% end %>
