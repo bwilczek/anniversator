@@ -1,0 +1,2 @@
+module Anniversator
+end

@@ -1,0 +1,3 @@
+project=anniversator
+test=rspec
+template=erb
